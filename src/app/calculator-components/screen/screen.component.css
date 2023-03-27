@@ -1,0 +1,12 @@
+.screen-main{
+    /* min-height: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.example-full-width{
+    width: 80%;
+    box-shadow: 2px 2px 4px rgb(212, 212, 212);
+    border-radius: 5px;
+}
