@@ -1,1 +1,6 @@
-<p>scientific-control works!</p>
+<div class="control">
+
+    <mat-slide-toggle color="primary" #control (change)="handleControlChange(control)">{{checked?"Enabled":"Enable"}}
+        Scientific
+        Mode</mat-slide-toggle>
+</div>

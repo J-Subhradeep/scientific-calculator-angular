@@ -8,6 +8,7 @@ import { MatFormFieldModule, MatFormFieldAppearance, matFormFieldAnimations, Mat
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     ScreenComponent,
@@ -15,7 +16,13 @@ import { MatIconModule } from '@angular/material/icon';
     ScientificControlComponent
   ],
   imports: [
-    CommonModule, MatInputModule, MatButtonModule, BrowserAnimationsModule, FormsModule, MatIconModule
+    CommonModule,
+    MatInputModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatIconModule,
+    MatSlideToggleModule
   ],
   exports: [
     ScreenComponent,
@@ -24,4 +31,6 @@ import { MatIconModule } from '@angular/material/icon';
 
   ]
 })
-export class CalculatorComponentsModule { }
+export class CalculatorComponentsModule { 
+  
+}

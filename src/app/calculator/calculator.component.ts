@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent {
-
+  checked = false;
+  toggleParent(value: any) {
+    console.log(value);
+    this.checked = value;
+  }
 }

@@ -1,1 +1,39 @@
-<p>buttons works!</p>
+<div class="buttons-container">
+    <div class="scientific-container" *ngIf="checked">
+
+        <div class="scientific-part">
+            <button class="number" *ngFor="let item of scientificButtons" mat-raised-button color="primary"
+                aria-label="Example icon button with a menu icon">
+                <span>{{item.value}}</span>
+            </button>
+        </div>
+    </div>
+    <div>
+        <div class="normal-part">
+
+
+            <div class="numbers">
+
+                <button class="number" *ngFor="let item of numbers" mat-mini-fab color="primary"
+                    aria-label="Example icon button with a menu icon">
+                    <span>{{item.value}}</span>
+                </button>
+            </div>
+            <div class="operations">
+                <button class="number2" *ngFor="let item of operations" mat-raised-button color="primary"
+                    aria-label="Example icon button with a menu icon">
+                    <span>{{item.operation}}</span>
+                </button>
+            </div>
+
+        </div>
+        <div class="brackets-and-result">
+            <div *ngFor="let item of bracketsAndEqual;let indexOfelement=index;">
+                <button class="number2 " id="brackets-and-result-{{indexOfelement}}" mat-fab color="primary"
+                    aria-label="Example icon button with a menu icon">
+                    <span>{{item.value}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
