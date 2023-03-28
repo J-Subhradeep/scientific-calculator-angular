@@ -8,10 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ScreenComponent {
   @Input() expression = "";
-  @Output() change = new EventEmitter<string>()
-  changeHandler(value: string) {
-    console.log(value);
+  @Output() appendS = new EventEmitter()
+  changeHandler(event: any) {
+    if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '.', '+', '-', '*', '/'].includes(event.key)) this.appendS.emit(event.key);
+    event.target.value = this.expression;
 
-    this.change.emit(value);
+
   }
 }

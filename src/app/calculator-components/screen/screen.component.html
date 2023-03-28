@@ -2,7 +2,7 @@
     <!-- <form class="example-form"> -->
     <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Expression</mat-label>
-        <input matInput value="{{expression}}" #input (keyup)="changeHandler(input.value)">
+        <input matInput value="{{expression}}" #inputt (keyup)="changeHandler($event)">
               
     </mat-form-field>
     <!-- </form> -->

@@ -17,11 +17,9 @@ export class CalculatorComponent {
     this.expression = this.expression + value;
   }
   clearString() {
+    console.log(this.expression);
+    
     this.expression = ""
   }
-  change(value: any) {
-    console.log(value);
 
-    this.expression = value;
-  }
 }
