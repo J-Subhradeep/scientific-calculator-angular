@@ -14,14 +14,15 @@
 
             <div class="numbers">
 
-                <button class="number" *ngFor="let item of numbers" mat-mini-fab color="primary"
-                    aria-label="Example icon button with a menu icon">
+                <button class="number" *ngFor="let item of numbers;let indexOfElement = index"
+                    (click)="indexOfElement==11?c():append(item.value)" id="number-{{indexOfElement}}" mat-mini-fab
+                    color="primary" aria-label="Example icon button with a menu icon">
                     <span>{{item.value}}</span>
                 </button>
             </div>
             <div class="operations">
                 <button class="number2" *ngFor="let item of operations" mat-raised-button color="primary"
-                    aria-label="Example icon button with a menu icon">
+                    (click)="append(item.value)" aria-label="Example icon button with a menu icon">
                     <span>{{item.operation}}</span>
                 </button>
             </div>

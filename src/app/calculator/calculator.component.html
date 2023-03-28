@@ -2,8 +2,8 @@
 
 </div>
 <div class="calculator-main">
-    <app-screen></app-screen>
+    <app-screen [expression]="expression"></app-screen>
     <app-scientific-control (toggle)="toggleParent($event)"></app-scientific-control>
     
-    <app-buttons [checked]="checked"></app-buttons>
+    <app-buttons [checked]="checked" (appendS)="appendString($event)" (clear)="clearString()" (change)="change($event)"></app-buttons>
 </div>

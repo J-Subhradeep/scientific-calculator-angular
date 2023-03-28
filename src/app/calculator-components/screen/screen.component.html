@@ -2,14 +2,11 @@
     <!-- <form class="example-form"> -->
     <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Expression</mat-label>
-        <input matInput>
-        <button mat-mini-fab matSuffix color="warn" style="margin-right: .5rem;">
-            <mat-icon>close</mat-icon>
-        </button>
-        <mat-hint>Hint</mat-hint>
+        <input matInput value="{{expression}}" #input (keyup)="changeHandler(input.value)">
+              
     </mat-form-field>
     <!-- </form> -->
 
-
+   
 
 </div>

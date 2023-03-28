@@ -17,6 +17,9 @@
 .number2{
     margin-top: 1.23rem;
 }
+#number-11{
+    background-color: crimson;
+}
 .operations{
     display: flex;
     flex-direction: column;
@@ -57,6 +60,7 @@
 .scientific-part button{
     margin-left: .5rem;
     margin-right: .5rem;
+    border-radius: 1.25rem;
 }
 .scientific-container{
     display: flex;
@@ -66,4 +70,5 @@
 }
 #brackets-and-result-3{
     background-color: navy;
+    font-size: 1.25rem;
 }

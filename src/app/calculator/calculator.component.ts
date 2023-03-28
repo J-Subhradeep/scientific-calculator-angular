@@ -7,8 +7,21 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   checked = false;
+  expression = "";
+  result = "";
   toggleParent(value: any) {
     console.log(value);
     this.checked = value;
+  }
+  appendString(value: any) {
+    this.expression = this.expression + value;
+  }
+  clearString() {
+    this.expression = ""
+  }
+  change(value: any) {
+    console.log(value);
+
+    this.expression = value;
   }
 }
