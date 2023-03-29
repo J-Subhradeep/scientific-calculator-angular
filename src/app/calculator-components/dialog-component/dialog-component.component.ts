@@ -7,10 +7,16 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./dialog-component.component.css']
 })
 export class DialogComponentComponent {
-  value = 0;
+
   @Input() scientificOperator = "";
+  value = { value: 0, operator: this.data.operator ,value2 :0};
+  
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
   onValueChange(val: any) {
-    this.value = parseFloat(val);
+    this.value.value = parseFloat(val);
+  }
+  onValueChange2(val:any){
+    this.value.value2 = parseFloat(val);
   }
 }
