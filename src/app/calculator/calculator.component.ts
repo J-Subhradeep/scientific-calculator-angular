@@ -27,6 +27,9 @@ export class CalculatorComponent {
     this.expression = ""
   }
   evaluateExp() {
+    if (this.expression == "") {
+      return;
+    }
     try {
 
       this.expression = math.evaluate(this.expression);
@@ -36,6 +39,7 @@ export class CalculatorComponent {
     }
   }
   del() {
+    if (this.expression == "Equation Invalid") this.expression = "";
     let str = this.expression.toString();
     this.expression = str.substring(0, str.length - 1);
     // this.expression = this.expression.slice(0, - 1);
