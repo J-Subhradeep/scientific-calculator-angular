@@ -18,6 +18,7 @@ export class CalculatorComponent {
     this.checked = value;
   }
   appendString(value: any) {
+    if (this.expression == "Equation Invalid") this.expression = ""
     this.expression = this.expression + value;
   }
   clearString() {
@@ -26,7 +27,13 @@ export class CalculatorComponent {
     this.expression = ""
   }
   evaluateExp() {
-    this.expression = math.evaluate(this.expression);
+    try {
+
+      this.expression = math.evaluate(this.expression);
+    }
+    catch {
+      this.expression = "Equation Invalid"
+    }
   }
   del() {
     let str = this.expression.toString();
