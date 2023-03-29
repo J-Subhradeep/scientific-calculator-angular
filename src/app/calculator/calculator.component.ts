@@ -28,19 +28,27 @@ export class CalculatorComponent {
   evaluateExp() {
     this.expression = math.evaluate(this.expression);
   }
+  del() {
+    let str = this.expression.toString();
+    this.expression = str.substring(0, str.length - 1);
+    // this.expression = this.expression.slice(0, - 1);
+  }
   constructor(public dialog: MatDialog) { }
   openDialog() {
     let dialogRef = this.dialog.open(DialogComponentComponent, { data: { operator: operatorResolver(this.scientificOperator) } });
     dialogRef.afterClosed().subscribe((result) => {
-      let arr = result.split(",");
-      let value = arr[0];
-      let op = arr[1];
-      console.log(arr);
-      if (op === 'nth root of x') this.appendString(getExpressionFromOperator(value, op, arr[2]));
-      else {
+      if (result) {
 
-        console.log(getExpressionFromOperator(value, op));
-        this.appendString(getExpressionFromOperator(value, op))
+        let arr = result.split(",");
+        let value = arr[0];
+        let op = arr[1];
+        console.log(arr);
+        if (op === 'nth root of x' || op === "logb(x)") this.appendString(getExpressionFromOperator(value, op, arr[2]));
+        else {
+
+          console.log(getExpressionFromOperator(value, op));
+          this.appendString(getExpressionFromOperator(value, op))
+        }
       }
       // if()
 

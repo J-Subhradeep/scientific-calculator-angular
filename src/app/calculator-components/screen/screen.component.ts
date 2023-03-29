@@ -15,4 +15,7 @@ export class ScreenComponent {
 
 
   }
+  handleString(value: string) {
+    return value.toString().replace("asin", "sin^-1").replace("acos", "cos^-1").replace("atan", "tan^-1").replace("acot", "cot^-1").replace("asec", "sec^-1").replace("acsc", "cosec^-1")
+  }
 }

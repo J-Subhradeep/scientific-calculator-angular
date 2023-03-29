@@ -9,7 +9,7 @@
             </button>
         </div>
     </div>
-    <div>
+    <div class="{{checked?'normal-part-container':'number-container'}}">
         <div class="normal-part">
 
 
@@ -33,7 +33,7 @@
             <div *ngFor="let item of bracketsAndEqual;let indexOfelement=index;">
                 <button class="number2 " id="brackets-and-result-{{indexOfelement}}" mat-fab color="primary"
                     aria-label="Example icon button with a menu icon"
-                    (click)="indexOfelement==3?result():append(item.value)">
+                    (click)="handleBracketResultDel(indexOfelement,item.value,$event)">
                     <span>{{item.value}}</span>
                 </button>
             </div>

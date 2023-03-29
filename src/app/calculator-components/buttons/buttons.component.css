@@ -1,8 +1,9 @@
 .buttons-container{
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-wrap: wrap;
 }
+
 .normal-part{
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -69,12 +70,25 @@
     justify-content: center;
     padding-right: 1rem;
 }
+.number-container{
+    width: 100%;
+}
+.normal-part-container{
+    /* display: flex; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #brackets-and-result-3{
     background-color: navy;
     font-size: 1.25rem;
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 660px) {
     .scientific-container{
         padding-right: 0;
+    }
+    .normal-part-container{
+        width: 100%;
     }
 }

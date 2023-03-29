@@ -7,7 +7,7 @@
     border: 1px solid rgb(225, 225, 225);
     
 }
-@media screen and (max-width:630px) {
+@media screen and (max-width:660px) {
     .calculator-main{
         width: 13rem;
         margin: 1rem;

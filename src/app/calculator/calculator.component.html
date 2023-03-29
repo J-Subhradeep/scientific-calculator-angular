@@ -6,5 +6,5 @@
     <app-scientific-control (toggle)="toggleParent($event)"></app-scientific-control>
 
     <app-buttons [checked]="checked" (appendS)="appendString($event)" (clear)="clearString()"
-        (eval)="evaluateExp()" (openDialogComponent)="openDialog()" (setScientificOp)="setScientificOperator($event)"></app-buttons>
+        (eval)="evaluateExp()" (openDialogComponent)="openDialog()" (setScientificOp)="setScientificOperator($event)" (delOperation)="del()"></app-buttons>
 </div>

@@ -6,15 +6,24 @@
         <input type="number" matInput #input value="{{value.value}}" (keyup)="onValueChange(input.value)">
 
     </mat-form-field>
+    <br>
     <mat-form-field appearance="fill" *ngIf="data.operator == 'nth root of x'">
         <mat-label >Value of 'n'</mat-label>
         <input type="number" matInput #input2 value="{{value.value2}}"
             (keyup)="onValueChange2(input2.value)">
 
     </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" *ngIf="data.operator == 'logb(x)'">
+        <mat-label >Base</mat-label>
+        <input type="number" matInput #input2 value="{{value.value2}}"
+            (keyup)="onValueChange2(input2.value)">
+
+    </mat-form-field>
+
 </div>
 <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close mat-dialog-close="">Cancel</button>
     <button mat-button cdkFocusInitial mat-dialog-close
         mat-dialog-close="{{[value.value,value.operator,value.value2]}}">Ok</button>
 </div>

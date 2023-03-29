@@ -26,24 +26,25 @@ export const operatorResolver = (operator: string) => {
 
         case "sqrt": return "sqrt(x)";
 
-        case "sqrt": return "sqrt(x)";
 
-        case "log": return "log(x)";
+
+        case "ln": return "ln(x)";
 
         case "log10": return "log10(x)";
 
         case "^": return "power 'x'";
 
-        case "mod": return "y % x";
+        case "mod": return " % x (calculate remainder)";
         case "pi": return "pi";
         case "√": return "square root of 'x'"
         case "n√": return "nth root of x";
+        case "logb(x)": return "logb(x)"
     }
     return "";
 }
-export const getExpressionFromOperator = (value:string,operator:string,value2="") =>{
+export const getExpressionFromOperator = (value: string, operator: string, value2 = "") => {
     let val = parseFloat(value);
-    switch(operator){
+    switch (operator) {
         case "sin(x deg)": return `sin(${val} deg)`;
         case "cos(x deg)": return `cos(${val} deg)`;
         case "tan(x deg)": return `tan(${val} deg)`;
@@ -59,6 +60,11 @@ export const getExpressionFromOperator = (value:string,operator:string,value2=""
         case "power 'x'": return `^(${val})`;
         case "square root of 'x'": return `sqrt(${val})`;
         case "nth root of x": return `nthRoot(${val},${value2})`
+        case "ln(x)": return `log(${val})`
+        case "log10(x)": return `log10(${val})`
+        case "pi": return `pi`
+        case "logb(x)": return `log(${val},${value2})`
+        case " % x (calculate remainder)": return `%${val}`
     }
     return "0";
 }
