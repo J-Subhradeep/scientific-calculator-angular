@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{(data.operator != 'pi')?"Hi User":"It is π"}}</h1>
+<div mat-dialog-content>
+    <p *ngIf="data.operator != 'pi'">{{data.operator}}</p>
+    <mat-form-field appearance="fill" *ngIf="data.operator != 'pi'">
+        <mat-label>Value of 'x'</mat-label>
+        <input type="number" matInput #input value="{{value}}" (keyup)="onValueChange(input.value)">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close mat-dialog-close="cancel">Cancel</button>
+    <button mat-button cdkFocusInitial mat-dialog-close mat-dialog-close="{{value}}">Ok</button>
+</div>

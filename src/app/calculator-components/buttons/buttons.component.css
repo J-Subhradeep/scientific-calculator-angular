@@ -1,6 +1,7 @@
 .buttons-container{
     padding: 1rem 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
 .normal-part{
     display: grid;
@@ -71,4 +72,9 @@
 #brackets-and-result-3{
     background-color: navy;
     font-size: 1.25rem;
+}
+@media screen and (max-width: 630px) {
+    .scientific-container{
+        padding-right: 0;
+    }
 }

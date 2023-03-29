@@ -3,6 +3,7 @@
 
         <div class="scientific-part">
             <button class="number" *ngFor="let item of scientificButtons" mat-raised-button color="primary"
+                (click)="setScientificOperator(item.value);openDialog();"
                 aria-label="Example icon button with a menu icon">
                 <span>{{item.value}}</span>
             </button>
@@ -31,7 +32,8 @@
         <div class="brackets-and-result">
             <div *ngFor="let item of bracketsAndEqual;let indexOfelement=index;">
                 <button class="number2 " id="brackets-and-result-{{indexOfelement}}" mat-fab color="primary"
-                    aria-label="Example icon button with a menu icon">
+                    aria-label="Example icon button with a menu icon"
+                    (click)="indexOfelement==3?result():append(item.value)">
                     <span>{{item.value}}</span>
                 </button>
             </div>

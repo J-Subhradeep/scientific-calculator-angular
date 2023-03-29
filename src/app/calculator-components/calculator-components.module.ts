@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component'
 @NgModule({
   declarations: [
     ScreenComponent,
     ButtonsComponent,
-    ScientificControlComponent
+    ScientificControlComponent,
+    DialogComponentComponent
   ],
+  entryComponents:[DialogComponentComponent],
   imports: [
     CommonModule,
     MatInputModule,
@@ -22,7 +26,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     BrowserAnimationsModule,
     FormsModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDialogModule
   ],
   exports: [
     ScreenComponent,
