@@ -14,9 +14,9 @@ export class DialogComponentComponent {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
   onValueChange(val: any) {
-    this.value.value = parseFloat(val);
+    this.value.value = parseFloat(val)?parseFloat(val):0;
   }
   onValueChange2(val:any){
-    this.value.value2 = parseFloat(val);
+    this.value.value2 = parseFloat(val)?parseFloat(val):0;
   }
 }

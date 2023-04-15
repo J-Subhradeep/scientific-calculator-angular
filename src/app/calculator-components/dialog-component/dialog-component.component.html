@@ -3,20 +3,20 @@
     <p *ngIf="data.operator != 'pi'">{{data.operator}}</p>
     <mat-form-field appearance="fill" *ngIf="data.operator != 'pi'">
         <mat-label>Value of 'x'</mat-label>
-        <input type="tel" matInput #input value="{{value.value}}" (keyup)="onValueChange(input.value)">
+        <input type="text" matInput #input value="{{value.value}}" (keyup)="onValueChange(input.value)">
 
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" *ngIf="data.operator == 'nth root of x'">
         <mat-label >Value of 'n'</mat-label>
-        <input type="tel" matInput #input2 value="{{value.value2}}"
+        <input type="text" matInput #input2 value="{{value.value2}}"
             (keyup)="onValueChange2(input2.value)">
 
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" *ngIf="data.operator == 'logb(x)'">
         <mat-label >Base</mat-label>
-        <input type="tel" matInput #input2 value="{{value.value2}}"
+        <input type="text" matInput #input2 value="{{value.value2}}"
             (keyup)="onValueChange2(input2.value)">
 
     </mat-form-field>
