@@ -13,7 +13,7 @@ export class ButtonsComponent {
 
   bracketsAndEqual = [{ value: "(" }, { value: ")" }, { value: "DEL" }, { value: "=" }]
 
-  scientificButtons = [{ value: "sin" }, { value: "cos" }, { value: "tan" }, { value: "cosec" }, { value: "cot" }, { value: "sec" }, { value: "sin^-1" }, { value: "cos^-1" }, { value: "tan^-1" }, { value: "cosec^-1" }, { value: "sec^-1" }, { value: "cot^-1" },  { value: "log10" }, { value: "ln" }, { value: "logb(x)" }, { value: "pi" }, { value: "mod" }, { value: "^" }, { value: "√" }, { value: "n√" }]
+  scientificButtons = [{ value: "sin" }, { value: "cos" }, { value: "tan" }, { value: "cosec" }, { value: "cot" }, { value: "sec" }, { value: "sin^-1" }, { value: "cos^-1" }, { value: "tan^-1" }, { value: "cosec^-1" }, { value: "sec^-1" }, { value: "cot^-1" },  { value: "log10" }, { value: "ln" }, { value: "logb(x)" }, { value: "pi" }, { value: "mod" }, { value: "^" }, { value: "√" }, { value: "n√" },{value:"e^x"}]
   @Input() checked = false;
   @Output() eval = new EventEmitter();
   @Output() appendS = new EventEmitter<string>();

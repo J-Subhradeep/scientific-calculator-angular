@@ -36,9 +36,10 @@ export const operatorResolver = (operator: string) => {
 
         case "mod": return " % x (calculate remainder)";
         case "pi": return "pi";
-        case "√": return "square root of 'x'"
+        case "√": return "Square Root of 'x'"
         case "n√": return "nth root of x";
-        case "logb(x)": return "logb(x)"
+        case "logb(x)": return "logb(x)";
+        case "e^x": return "Exponential Function e^x";
     }
     return "";
 }
@@ -58,9 +59,10 @@ export const getExpressionFromOperator = (value: string, operator: string, value
         case "sin^-1(x)": return `asin(${val})`;
         case "cos^-1(x)": return `acos(${val})`;
         case "power 'x'": return `^(${val})`;
-        case "square root of 'x'": return `sqrt(${val})`;
+        case "Square Root of 'x'": return `sqrt(${val})`;
         case "nth root of x": return `nthRoot(${val},${value2})`
         case "ln(x)": return `log(${val})`
+        case "Exponential Function e^x": return `exp(${val})`
         case "log10(x)": return `log10(${val})`
         case "pi": return `pi`
         case "logb(x)": return `log(${val},${value2})`
